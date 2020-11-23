@@ -22,7 +22,7 @@ const promptManager = () => {
 const init = async() => {
     console.log('Use the following prompts to build an Organizational Chart Website for you Engineering Team.');
     try {
-        const answers = await inquirer.prompt(questions);
+        const answers = await promptManager();
 
         const { name, id, email, role } = answers;
 
@@ -42,15 +42,18 @@ const init = async() => {
         }
 
         //Prompt the questions again when adding team member is chosen
-        if (answers.moreEmployees) init();
+        if (answers.moreEmployees) {
+            init();
+        } else {
+            console.log(JSON.stringify(employees, null, '\t'));
 
-        console.log(JSON.stringify(employees, null, '\t'));
+            const html = render(employees);
 
-        const html = render(employees);
+            await writeFileAsync(outputPath, html);
 
-        await writeFileAsync(outputPath, html);
+            console.log('Successfully wrote to team.html');
+        };
 
-        console.log('Successfully wrote to team.html');
     } catch (err) {
         console.log(err);
     }
