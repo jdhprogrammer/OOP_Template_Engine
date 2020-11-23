@@ -1,15 +1,43 @@
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+const questions = require("./lib/Questions");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
+const writeFileAsync = promisify(writeFile);
 
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+
+
+const promptManager = () => {
+    return prompt(questions);
+};
+
+const init = async() => {
+    console.log('Answer the Following Questions to build out your Engineering Team Map');
+    try {
+        let answers = {};
+        answers = await promptManager();
+        let employees = [answers];
+
+        console.log(JSON.stringify(employees, null, '\t'));
+
+        const html = render(employees);
+
+        await writeFileAsync('team.html', html);
+
+        console.log('Successfully wrote to team.html');
+    } catch (err) {
+        console.log(err);
+    }
+};
+
+init();
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
