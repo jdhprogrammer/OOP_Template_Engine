@@ -8,7 +8,7 @@ github: https://github.com/jdhprogrammer
 
 Project Repository: https://github.com/jdhprogrammer/OOP_Template_Engine
 
-Project Deployment: http://jdhprogrammer.com/OOP_Template_Engine/
+Project Deployment: https://jdhprogrammer.com/OOP_Template_Engine/
 
 Walk-through Video: https://youtu.be/_t6IM7OjrH4
 
