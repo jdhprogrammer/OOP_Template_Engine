@@ -1,9 +1,7 @@
+
 node_modules
-
 READMEcopy.md
-
-./lib/htmlRenderer.js
-
-./output/team.html
-
+htmlRenderer.js
+team.html
 .gitignore
+bckp
