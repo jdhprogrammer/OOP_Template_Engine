@@ -1,0 +1,69 @@
+.jumbotron {
+    color: white;
+    background-image: url("../Assets/images/cool-background2.jpeg");
+    background-size: cover;
+    background-position: 50%;
+}
+
+body {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-header {
+    background: rgb(224, 224, 224);
+}
+
+h1,
+h3,
+h4 {
+    font-family: 'Catamaran', sans-serif;
+}
+
+h1 {
+    font-size: xx-large;
+    color: rgb(255, 255, 255);
+}
+
+h3 {
+    color: aliceblue;
+}
+
+h3.name {
+    color: black;
+}
+
+h4.manager {
+    color: rgb(255, 154, 65);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+h4.engineer {
+    color: rgb(249, 198, 43);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+h4.intern {
+    color: rgb(112, 191, 112);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.card {
+    width: 335px;
+    height: 308px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.card-body {
+    background-color: rgb(105, 149, 252);
+    padding: 12px;
+}
+
+.list-group-item {
+    padding: 8px 8px;
+}

@@ -11,7 +11,7 @@ const writeFileAsync = promisify(writeFile);
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
-const render = require("./lib/htmlRenderer");
+const render = require("./lib/htmlRenderer_2");
 
 let employees = [];
 
